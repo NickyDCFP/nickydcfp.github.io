@@ -1,22 +1,25 @@
-"Your Name":
+"Nicky Kriplani":
   bold: true
+  url: https://nickydcfp.github.io
 
-"Robert White":
-  url: https://www.google.com/?q=Robert+White
+"Niv Cohen":
+  url: https://nivc.github.io/
 
-"Charles Green (MIT)":
-  name: Charles Green
-  url: https://www.google.com/?q=Charles+Green+MIT
+"Minh Pham":
+  url: https://www.mnpham.com/
 
-"Charles Green (Stanford)":
-  name: Charles Green
-  url: https://www.google.com/?q=Charles+Green+Stanford
+"Gowthami Somepalli":
+  url: https://somepago.github.io/
 
-"Garrett Harris":
-  url: https://www.google.com/?q=Garrett+Harris
+"Chinmay Hegde":
+  url: https://chinmayhegde.github.io/
 
-"James Wang":
-  url: https://www.google.com/?q=James+Wang
 
-"John Doe":
-  url: https://www.google.com/?q=John+Doe
+# Sample to solve some confusion:
+# "Charles Green (MIT)":
+#   name: Charles Green
+#   url: https://www.google.com/?q=Charles+Green+MIT
+
+# "Charles Green (Stanford)":
+#   name: Charles Green
+#   url: https://www.google.com/?q=Charles+Green+Stanford
