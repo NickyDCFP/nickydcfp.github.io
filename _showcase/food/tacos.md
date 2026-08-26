@@ -8,7 +8,7 @@ group: More Food!
   <img data-src="/assets/images/food/tacos_taqueria.jpg" class="lazy w-100 rounded-xl-top" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
   <div class="card-body">
     <p class="card-text">
-      Tacos (from <a href="https://share.google/U4IMazEUW5foSjcC3" target="_blank">Taqueria Al Pastor</a> in Brooklyn)
+      Tacos from <a href="https://share.google/U4IMazEUW5foSjcC3" target="_blank">Taqueria Al Pastor</a> in Brooklyn Heights
     </p>
   </div>
 </div>
