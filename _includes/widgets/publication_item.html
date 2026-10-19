@@ -9,7 +9,7 @@
             {%- endif -%}
         </div>
         <div class="col-md-8 col-xl-9 p-3 pl-md-0  custom-rounded">
-            <a href=" {{item.links.Paper}} " class="text-white"><h5 class="mt-0 mb-1 font-weight-normal text-white">{{ item.title }}</h5></a>
+            <a href=" {{ item.links['Project Page'] | default: item.links.Paper }} " class="text-white"><h5 class="mt-0 mb-1 font-weight-normal text-white">{{ item.title }}</h5></a>
             <p class="mt-0 mb-0 small text-white">{% include widgets/author_list.html authors=item.authors %}</p>
             <p class="mt-0 mb-0 small text-white">{{item.pub_pre}}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }} <span data-semantic-scholar-id="{{ item.semantic_scholar_id }}"></span></p>
             <p class="mt-0 mb-0 small text-info">{{ item.abstract }}</p>

@@ -1,6 +1,7 @@
 {%- assign authors = include.authors -%}
 {%- assign has_eq_contrib = false -%}
 {%- assign has_corresponding = false -%}
+{%- assign has_eq_advising = false -%}
 
 {%- for _key in authors -%}
     {%- assign last_char = _key | slice: -1, 1%}
@@ -14,6 +15,10 @@
         {%- assign key = _key | split: "*" | first -%}
         {%- assign mark = "*" -%}
         {%- assign has_eq_contrib = true -%}
+    {%- elsif last_char == "†" -%}
+        {%- assign key = _key | split: "†" | first -%}
+        {%- assign mark = "<sup>†</sup>" -%}
+        {%- assign has_eq_advising = true -%}
     {%- elsif last_char == "#" -%}
         {%- assign key = _key | split: "#" | first -%}
         {%- assign mark = '<sup>#</sup>' -%}
@@ -47,13 +52,17 @@
 
 {%- endfor -%}
 
-{%- if has_eq_contrib or has_corresponding %}
+{%- if has_eq_contrib or has_eq_advising or has_corresponding %}
 <mark class="floating text-white">(
     {%- if has_eq_contrib -%}
         *<i>equal contribution</i>
     {%- endif -%}
-    {%- if has_corresponding -%}
+    {%- if has_eq_advising -%}
         {%- if has_eq_contrib -%}, {% endif -%}
+        <sup>†</sup><i>equal advising</i>
+    {%- endif -%}
+    {%- if has_corresponding -%}
+        {%- if has_eq_contrib or has_eq_advising -%}, {% endif -%}
         <sup>#</sup><i>corresponding author</i>
     {%- endif -%}
 )</mark>

@@ -5,7 +5,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="{{ page.description | default: site.data.profile.description | strip_html | normalize_whitespace | truncate: 160 }}">
+    {%- if page.url == "/" %}
+    <title>{{ site.data.profile.navbar_name }}</title>
+    {%- else %}
     <title>{{ page.title }} - {{ site.data.profile.navbar_name }}</title>
+    {%- endif %}
+    <meta property="og:site_name" content="{{ site.data.profile.navbar_name }}">
+    {%- if page.url == "/" %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "{{ site.data.profile.navbar_name }}",
+      "url": "{{ site.url }}/"
+    }
+    </script>
+    {%- endif %}
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
